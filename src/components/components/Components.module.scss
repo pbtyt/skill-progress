@@ -1,0 +1,143 @@
+@use '@styles/mixins.scss' as m;
+
+.componentsContainer {
+	padding: var(--sp-padding-content);
+
+	width: 100%;
+	height: 100%;
+
+	p {
+		line-height: 135%;
+	}
+
+	.wrapper {
+		padding: 48px;
+
+		border-radius: 40px;
+		position: relative;
+		background-color: #171717;
+
+		display: flex;
+		gap: 6rem;
+		@include m.gradientBalls;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			.info {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.counselling {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+
+				align-items: flex-start;
+
+				.button {
+					padding: 32px 100px;
+				}
+			}
+		}
+
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 32px;
+
+			.componentInfoWrapper {
+				backdrop-filter: blur(32px);
+				border: var(--sp-ui-border-base);
+				border-radius: 20px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+
+				background: linear-gradient(
+					180deg,
+					rgba(234, 234, 234, 0.2) 0%,
+					rgba(255, 255, 255, 0) 100%
+				);
+
+				.componentDesc {
+					border-top: 1px solid #ffffff4d;
+				}
+			}
+
+			.selector {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				.select {
+					--border-color: #ffffff33;
+
+					width: 120px;
+					border: 2px solid var(--border-color);
+					border-radius: 2px;
+
+					&.active {
+						--border-color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.bgWrapper {
+	position: relative;
+
+	.circleL {
+		position: absolute;
+		top: 10%;
+		right: 25%;
+		border-radius: 50%;
+		width: 900px;
+		height: 500px;
+		filter: blur(500px);
+		background: #595bd2b2;
+		z-index: -1;
+	}
+
+	.circleB {
+		position: absolute;
+		right: 5%;
+		bottom: -10%;
+		border-radius: 50%;
+		width: 900px;
+		height: 500px;
+		filter: blur(500px);
+		background: #262779b2;
+
+		z-index: -1;
+	}
+}
+
+.bgWrapper::after {
+	// content: '';
+
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// height: 100%;
+
+	// background: url(/bg2.png) no-repeat;
+	// background-size: 100%;
+	// background-position: 0 0;
+
+	// z-index: calc(var(--sp-bg-z-index));
+
+	@include m.background-setup('bg2.png');
+
+	// background-position: center;
+}

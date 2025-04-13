@@ -1,0 +1,36 @@
+@mixin mobile {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 481px) and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin gradientBalls {
+	background-image: radial-gradient(
+			circle at 24% 34%,
+			#595bd2b2 27%,
+			transparent 64.05%
+		),
+		radial-gradient(circle at 77% 67%, #262779b2 15%, transparent 54.05%);
+}
+
+@mixin background-setup($background-name) {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: url(/#{$background-name}) no-repeat;
+	background-size: 100%;
+	background-position: 0 0;
+
+	z-index: calc(var(--sp-bg-z-index));
+}

@@ -1,0 +1,47 @@
+:root {
+	// Colors
+	//Base
+	--sp-ui-colors-white: #ffffff;
+	--sp-ui-colors-black: #171717;
+	--sp-ui-colors-glass: linear-gradient(
+		0deg,
+		rgba(234, 234, 234, 1) 0%,
+		rgba(132, 132, 132, 1) 100%
+	);
+	//Border
+	--sp-ui-colors-border-primary: #ffffff33;
+	//Button
+	--sp-ui-colors-button-primary: linear-gradient(
+		11deg,
+		rgba(53, 56, 255, 1) 0%,
+		rgba(102, 85, 254, 1) 100%
+	);
+	--sp-ui-colors-button-secondary: #ffff;
+
+	//Borders
+	--sp-ui-border-base: 2px solid var(--sp-ui-colors-border-primary);
+
+	//Text Font Size
+	//Desktop
+	--sp-ui-text-fs-h1-desktop: 52px;
+	--sp-ui-text-fs-h2-desktop: 48px;
+	--sp-ui-text-fs-h3-desktop: 32px;
+	--sp-ui-text-fs-standart-desktop: 20px;
+	//Tablet
+	--sp-ui-text-fs-h1-tablet: 32px;
+	--sp-ui-text-fs-h2-tablet: 24px;
+	--sp-ui-text-fs-h3-tablet: 20px;
+	--sp-ui-text-fs-standart-tablet: 14px;
+	//Phone
+	--sp-ui-text-fs-h1-phone: 18px;
+	--sp-ui-text-fs-h2-phone: 16px;
+	--sp-ui-text-fs-h3-phone: 14px;
+	--sp-ui-text-fs-standart-phone: 12px;
+
+	//Utils
+	--sp-header-height: 48px;
+	--sp-bg-z-index: -2;
+
+	//Paddings
+	--sp-padding-content: 56px;
+}

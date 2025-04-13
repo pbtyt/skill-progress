@@ -1,0 +1,51 @@
+.header {
+	height: var(--sp-header-height);
+
+	padding: 0 var(--sp-padding-content);
+	margin-top: 24px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.navBar {
+		display: flex;
+		align-items: center;
+
+		.navButtons {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+
+			.navButton {
+				color: var(--sp-ui-colors-white);
+				font-size: var(--sp-ui-text-fs-standart-desktop);
+				font-weight: 500;
+			}
+		}
+	}
+
+	.socialMediaWrapper {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		.socialMedia {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 42px;
+			height: 42px;
+			border-radius: 8px;
+
+			&.discord {
+				background: linear-gradient(180deg, #5865f2 0%, #6655fe 100%);
+			}
+
+			&.telegram {
+				background: linear-gradient(180deg, #27a7e7 0%, #6655fe 100%);
+			}
+		}
+	}
+}

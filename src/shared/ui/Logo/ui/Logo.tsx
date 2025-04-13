@@ -5,7 +5,7 @@ import styles from './Logo.module.css';
 export function Logo() {
 	return (
 		<Link href={SITE_ROUTES_BASE.HOME} className={styles.logoWrapper}>
-			<div className={styles.logo}></div>
+			<img src='./Logo.png' alt='' className={styles.logo} />
 		</Link>
 	);
 }

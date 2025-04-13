@@ -1,78 +1,21 @@
 .button {
-	--border-radius: 10px;
-	--inset: 4px;
+	padding: 32px 48px 32px 48px;
 
-	position: relative;
+	border-radius: 16px;
 
-	padding: 14px 20px;
-
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-
-	color: rgba(255, 255, 255, 0.96);
-
-	font-size: 17px;
-	line-height: 22px;
+	text-align: center;
+	font-size: var(--sp-ui-text-fs-standart-desktop);
 	font-weight: 600;
-
-	border-radius: var(--border-radius);
-	min-height: inherit;
 }
 
 .button.primary {
-	background: linear-gradient(26.57deg, #3c1a70 0%, rgba(93, 14, 245, 0.83));
+	background: var(--sp-ui-colors-button-primary);
+	box-shadow: 0px 0px 18px 0px #23268a;
+	color: var(--sp-ui-colors-white);
 }
 
-.button.dark {
-	background-color: #1b1a1d;
-}
-
-.button.gray {
-	background-color: rgba(139, 136, 146, 0.32);
-}
-
-.button.transparent {
-	background-color: transparent;
-}
-
-.button:disabled {
-	opacity: 0.5;
-	cursor: auto;
-}
-
-.buttonBorder {
-	position: absolute;
-	inset: calc(var(--inset) * -1);
-	z-index: 0;
-
-	display: none;
-
-	padding: 1.5px;
-
-	border-radius: calc(var(--border-radius) + var(--inset));
-
-	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-	mask-composite: exclude;
-}
-
-.buttonBorder::before {
-	content: '';
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-
-	padding-top: calc(var(--button-size) + var(--inset) + 2px);
-
-	background: #8776f9;
-
-	width: calc(var(--button-size) + var(--inset) + 2px);
-
-	transform-origin: center center;
-	transform: translate(-50%, -50%);
-}
-
-.button:hover:not(:disabled) .buttonBorder {
-	display: block;
+.button.secondary {
+	background: var(--sp-ui-colors-button-secondary);
+	box-shadow: 0px 0px 18px 0px #ffffff;
+	color: #3538ff;
 }

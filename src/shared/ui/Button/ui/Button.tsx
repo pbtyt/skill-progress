@@ -25,7 +25,6 @@ export function Button({
 			className={clsx(className, styles.button, styles[`${buttonColor}`])}
 			{...rest}
 		>
-			{border && <div className={styles.buttonBorder}></div>}
 			{children}
 			{buttonText && <span>{buttonText}</span>}
 		</button>

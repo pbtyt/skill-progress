@@ -1,14 +1,13 @@
 import { SITE_NAME } from '@/shared/constants/seo.constants';
-import { Header } from '@/widgets/header';
 import { Modals } from './(components)/modals';
 
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter_Tight } from 'next/font/google';
 import { Providers } from './(components)/providers';
-import './global.css';
+import './styles/global.scss';
 
-const zen = Inter({
-	subsets: ['cyrillic', 'latin', 'cyrillic-ext'],
+const zen = Inter_Tight({
+	subsets: ['cyrillic'],
 	weight: ['300', '400', '500', '500', '700', '800'],
 	display: 'swap',
 	variable: '--font-zen',
@@ -35,7 +34,6 @@ export default function RootLayout({
 		<html lang='en'>
 			<body id='body' className={zen.className} style={{}}>
 				<Providers>
-					<Header />
 					{children}
 					<Modals />
 				</Providers>

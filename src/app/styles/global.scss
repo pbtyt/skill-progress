@@ -1,0 +1,131 @@
+@use './mixins.scss' as m;
+@use './variables.scss';
+* {
+	font-family: var(--font-zen);
+	margin: 0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:focus,
+*:hover {
+	outline: none;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+
+	background: var(--sp-ui-colors-black);
+}
+
+img {
+	user-select: none;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+input {
+	outline: 0;
+	border: 0;
+}
+h1,
+h2,
+h3,
+p {
+	line-height: 100%;
+	color: var(--sp-ui-colors-white);
+}
+h1 {
+	font-size: var(--sp-ui-text-fs-h1-desktop);
+	font-weight: 700;
+
+	@include m.tablet {
+		font-size: var(--sp-ui-text-fs-h1-tablet);
+		font-weight: 700;
+	}
+
+	@include m.mobile {
+		font-size: var(--sp-ui-text-fs-h1-phone);
+		font-weight: 500;
+	}
+}
+
+h2 {
+	font-size: var(--sp-ui-text-fs-h2-desktop);
+	font-weight: 600;
+
+	@include m.tablet {
+		font-size: var(--sp-ui-text-fs-h2-tablet);
+		font-weight: 600;
+	}
+
+	@include m.mobile {
+		font-size: var(--sp-ui-text-fs-h2-phone);
+		font-weight: 600;
+	}
+}
+
+h3 {
+	font-size: var(--sp-ui-text-fs-h3-desktop);
+	font-weight: 600;
+
+	@include m.tablet {
+		font-size: var(--sp-ui-text-fs-h3-tablet);
+		font-weight: 600;
+	}
+
+	@include m.mobile {
+		font-size: var(--sp-ui-text-fs-h3-phone);
+		font-weight: 600;
+	}
+}
+
+p {
+	font-size: var(--sp-ui-text-fs-standart-desktop);
+	font-weight: 400;
+
+	@include m.tablet {
+		font-size: var(--sp-ui-text-fs-standart-tablet);
+		font-weight: 400;
+	}
+
+	@include m.mobile {
+		font-size: var(--sp-ui-text-fs-standart-mobile);
+		font-weight: 400;
+	}
+}
